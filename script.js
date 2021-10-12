@@ -12,11 +12,21 @@ function createGrid(size){
                     const div = document.createElement("div");
                     div.style.width = (992- size*2)/size +"px";
                     div.style.height = (992- size*2)/size +"px";
+                    div.style.backgroundColor = "white";
                     myDivs.push(div);
                     div.classList.add("divs");
                     container.appendChild(div);
+                    let brightness = 10;
                     div.addEventListener("mouseover", function(e){
+                        if(e.target.style.backgroundColor !== "white")
+                        {
+                        
+                        e.target.style.filter =`brightness(${brightness*10}%)`;
+                        brightness--;
+                       
+                        }
                         e.target.style.backgroundColor = `rgb(${randomize(255)},${randomize(255)},${randomize(255)},1)`;
+                        
                     })
                     
                 }
@@ -49,6 +59,32 @@ clearButton.addEventListener("click", function(){
     removeGrid();
     createGrid(newSize);
 });
+
+
+
+
+clearButton.addEventListener("mouseenter", function(){
+    
+    clearButton.style.transform = "scale(1.1)";
+})
+
+clearButton.addEventListener("mouseleave", function(){
+ 
+    clearButton.style.transform = "scale(1)";
+})
+
+sizeButton.addEventListener("mouseenter", function(){
+    
+    sizeButton.style.transform = "scale(1.1)";
+})
+
+sizeButton.addEventListener("mouseleave", function(){
+ 
+    sizeButton.style.transform = "scale(1)";
+})
+
+clearButton.addEventListener("click", function(){
+})
 
 createGrid(size);
 

@@ -13,12 +13,14 @@ body
     justify-content: stretch;
     flex-wrap: wrap;
     width: 992px;
+    
 }
 .divs
 {
     border: 1px solid rgb(0, 0, 0);
     width: 60px;
     height: 60px;
+
 
 
 }
@@ -37,13 +39,25 @@ h1{
 
 .btn 
 {
-    color: #fffb00;
+    color: #F5F0F6;
     font-size: 18px;
-    background-color: rgb(128, 7, 133);
+    background-color: rgb(70, 106, 160);
     font-weight: 700;
     padding: 10px;
     text-align: center;
     width: 100px;
-    border: 2px solid rgb(255, 62, 229);
+    border: 2px solid rgb(119, 165, 187);
     border-radius: 8px;
+}
+
+.clear:active {
+
+    filter: brightness(80%);
+}
+
+.size:active {
+
+    filter: brightness(80%);
+
+
 }
